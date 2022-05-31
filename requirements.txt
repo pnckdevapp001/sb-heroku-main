@@ -1,0 +1,11 @@
+firebase_admin
+schedule
+beautifulsoup4
+requests
+pytz
+justgood
+gtts
+datetime
+apscheduler
+gtts
+pyqrcode

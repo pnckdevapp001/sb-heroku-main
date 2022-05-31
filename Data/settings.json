@@ -1,0 +1,37 @@
+{
+    "adders": true,
+    "addmsg": "Run selfbot",
+    "apikey": "imjustgood",
+    "blacklist": [],
+    "gname": {},
+    "groupIN": [
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "join": true,
+    "justGood": "YXBpLmltanVzdGdvb2QuY29t",
+    "keykick": "",
+    "leave": false,
+    "leavemsg": "",
+    "main": "api.imjustgood.com",
+    "maker": [
+        "ue541b98a9bd8d25e5388ff9a1378ece2"
+    ],
+    "notMast": "https://www.img.in.th/images/8d8a98f486d4e22cf0cf0d80340bfc7d.png",
+    "official": "",
+    "owner": [
+        "ue541b98a9bd8d25e5388ff9a1378ece2"
+    ],
+    "proMax": {},
+    "proStaff": {},
+    "rname": "Default",
+    "target": {},
+    "ticket": false,
+    "welcome": {},
+    "welcomsg": {},
+    "whitelist": [],
+    "lottosys":true
+}

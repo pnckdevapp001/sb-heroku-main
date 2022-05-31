@@ -1,0 +1,20 @@
+{
+    "name": "Line Selfbot",
+    "description": "A bot to manage groups and messages in Line Messenger",
+    "repository": "https://github.com/dnswd/line-selfbot",
+    "keywords": ["python", "line", "messenger", "naver", "selfbot"],
+    "env": {
+        "TOKEN": {
+            "description": "YOUR LINE TOKEN FOR LOGIN VIA TOKEN",
+            "value": ""
+        },
+        "EMAIL_ID": {
+            "description": "YOUR EMAIL OR LINE ID FOR LOGIN VIA PASSWORD",
+            "value": ""
+        },
+        "PASSWORD": {
+            "description": "YOUR PASSWORD FOR LOGIN VIA PASSWORD",
+            "value": ""
+        }
+    }
+}

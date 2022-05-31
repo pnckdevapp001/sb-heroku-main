@@ -1,0 +1,143 @@
+{
+    "type": "carousel",
+    "contents": [
+        {
+            "type": "bubble",
+            "size": "mega",
+            "hero": {
+              "type": "video",
+              "url": "https://vip6.ljbfbf.com/20220529/UJ2jjs2D/index.m3u8",
+              "previewUrl": "https://vip6.ljbfbf.com/20220529/UJ2jjs2D/index.m3u8",
+              "altContent": {
+                "type": "image",
+                "size": "full",
+                "aspectRatio": "1:1",
+                "aspectMode": "cover",
+                "url": "https://ljcdn.comtucdncom.com/upload/vod/20220601-1/b8d8be4a407469308f678c4351e1dfc2.jpg"
+              },
+              "aspectRatio": "1:1"
+            },
+            "body": {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "ตงหยาน เลือดผสม ตาโต นางฟ้าน้อย ซีรีส์ น่ารัก หางม้า ทางเดิน หลงใหล เซ็กส์ 720P HD",
+                  "size": "xs",
+                  "wrap": true
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "margin": "xs",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "size": "50px",
+                      "url": "https://avfreex24.com/avfreex24.svg",
+                      "offsetTop": "10px"
+                    },
+                    {
+                      "type": "text",
+                      "text": "เซลฟี่ในประเทศ",
+                      "size": "sm",
+                      "color": "#999999",
+                      "margin": "md",
+                      "flex": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            "footer": {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "button",
+                  "height": "sm",
+                  "action": {
+                    "type": "postback",
+                    "label": "PLAY",
+                    "data": "play-id"
+                  },
+                  "color": "#010a01",
+                  "style": "primary"
+                }
+              ],
+              "cornerRadius": "10px",
+              "borderWidth": "5px"
+            }
+          },
+          {
+            "type": "bubble",
+            "size": "mega",
+            "hero": {
+              "type": "video",
+              "url": "https://vip6.ljbfbf.com/20220529/UJ2jjs2D/index.m3u8",
+              "previewUrl": "https://vip6.ljbfbf.com/20220529/UJ2jjs2D/index.m3u8",
+              "altContent": {
+                "type": "image",
+                "size": "full",
+                "aspectRatio": "1:1",
+                "aspectMode": "cover",
+                "url": "https://ljcdn.comtucdncom.com/upload/vod/20220601-1/b8d8be4a407469308f678c4351e1dfc2.jpg"
+              },
+              "aspectRatio": "1:1"
+            },
+            "body": {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "ตงหยาน เลือดผสม ตาโต นางฟ้าน้อย ซีรีส์ น่ารัก หางม้า ทางเดิน หลงใหล เซ็กส์ 720P HD",
+                  "size": "xs",
+                  "wrap": true
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "margin": "xs",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "size": "50px",
+                      "url": "https://avfreex24.com/avfreex24.svg",
+                      "offsetTop": "10px"
+                    },
+                    {
+                      "type": "text",
+                      "text": "เซลฟี่ในประเทศ",
+                      "size": "sm",
+                      "color": "#999999",
+                      "margin": "md",
+                      "flex": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            "footer": {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "button",
+                  "height": "sm",
+                  "action": {
+                    "type": "postback",
+                    "label": "PLAY",
+                    "data": "play-id"
+                  },
+                  "color": "#010a01",
+                  "style": "primary"
+                }
+              ],
+              "cornerRadius": "10px",
+              "borderWidth": "5px"
+            }
+          }
+    ]
+  }
