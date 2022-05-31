@@ -27,8 +27,10 @@ from firebase_admin import credentials
 from firebase_admin import db
 from threading import Thread
 import threading
-
-
+import http.client
+from pornhub_api import PornhubApi
+api = PornhubApi()
+api.stars.all()
  
 cred = credentials.Certificate('serviceAccountKey.json')
 
@@ -534,6 +536,68 @@ def LINE_OP_TYPE(op):
                         #flexJav={"type": "bubble", "size": "kilo", "body":{"type": "box", "layout": "vertical", "contents": [{"type": "video", "url": vpath, "previewUrl": vpath, "altContent":{"type": "image", "size": "full", "aspectRatio": "1:1", "aspectMode": "cover", "url": x_vod_pic}},{"type": "box", "layout": "vertical", "contents": [{"type": "text", "text": "AVFREEX24.COM", "size": "xxs", "color": "#ff0000"}], "position": "absolute", "borderWidth": "1px", "borderColor": "#ff0000", "paddingStart": "5px", "paddingEnd": "5px", "paddingTop": "1px", "paddingBottom": "1px", "cornerRadius": "5px", "offsetTop": "5px", "offsetStart": "5px", "backgroundColor": "#00000011"},{"type": "box", "layout": "vertical", "contents": [{"type": "text", "text": x_vod_name_Th , "weight": "bold", "wrap": True, "color": "#ffffffcc"},{"type": "text", "text": x_type_name_Th, "wrap": True, "size": "xxs", "margin": "sm", "color": "#ffffffcc"}], "paddingTop": "5px", "paddingEnd": "10px", "paddingStart": "10px"}], "paddingAll": "0px", "paddingBottom": "13px", "backgroundColor": "#000000"}}
                         #print(flexJav)
                         client.sendFlexVideoTh(msg.to,x_vod_src)
+
+                    if re.search(r'avn', cmd):
+                        #label = "JAV"
+                        #APIAV = ["https://mgzyz1.com/api.php/provide/vod/?ac=detail","https://apilj.com/api.php/provide/vod/at/json/?ac=detail"]
+                        url = requests.get(f"https://ru-4569f-default-rtdb.asia-southeast1.firebasedatabase.app/GO"+str(random.randint(1,7))+"/"+str(random.randint(1,120))+".json")
+                        text = url.text
+                        data = json.loads(text)
+                        #x_vod_id = str(data['vod_id'])
+                        #x_vod_pic = data['splash']
+                        x_vod_src = data['src']
+                        #x_vod_name_Th = trans(avdata['vod_name'])
+                        #x_vod_name = avdata['vod_name']
+                        #x_vod_time = avdata['vod_time']
+                        #x_type_name_Th = trans(avdata['type_name'])
+                        #x_vod_score = str(avdata['vod_score'])
+                        #vpath = url_match(avdata['vod_play_url'])
+                        #flexJav={"type": "bubble", "size": "kilo", "body":{"type": "box", "layout": "vertical", "contents": [{"type": "video", "url": vpath, "previewUrl": vpath, "altContent":{"type": "image", "size": "full", "aspectRatio": "1:1", "aspectMode": "cover", "url": x_vod_pic}},{"type": "box", "layout": "vertical", "contents": [{"type": "text", "text": "AVFREEX24.COM", "size": "xxs", "color": "#ff0000"}], "position": "absolute", "borderWidth": "1px", "borderColor": "#ff0000", "paddingStart": "5px", "paddingEnd": "5px", "paddingTop": "1px", "paddingBottom": "1px", "cornerRadius": "5px", "offsetTop": "5px", "offsetStart": "5px", "backgroundColor": "#00000011"},{"type": "box", "layout": "vertical", "contents": [{"type": "text", "text": x_vod_name_Th , "weight": "bold", "wrap": True, "color": "#ffffffcc"},{"type": "text", "text": x_type_name_Th, "wrap": True, "size": "xxs", "margin": "sm", "color": "#ffffffcc"}], "paddingTop": "5px", "paddingEnd": "10px", "paddingStart": "10px"}], "paddingAll": "0px", "paddingBottom": "13px", "backgroundColor": "#000000"}}
+                        #print(flexJav)
+                        client.sendFlexVideoTh(msg.to,x_vod_src)
+                    
+                    if cmd.startswith('lox='):
+                        msgTU = cmd.split('lox=')[1]
+                        if msgTU == "":
+                            return
+                        DOWNLOAD_HEADERS = {'user-agent': 'TelegramBot (like TwitterBot)'}
+                        conn = http.client.HTTPSConnection("api.tiktokv.com")
+                        payload = ''
+                        headers = {}
+                        conn.request("GET", "/aweme/v1/multi/aweme/detail/?aweme_ids=%5B" + msgTU + "%5D", payload, headers)
+                        res = conn.getresponse()
+                        data = res.read()
+                        obj = json.loads(data.decode("utf-8"))
+                        download_url =  obj["aweme_details"][0]["video"]["play_addr"]["url_list"][0];
+                        client.sendFlexVideoTh(msg.to,download_url)
+                        
+
+                    if cmd.startswith('ph='):
+                        msgTU = cmd.split('ph=')[1]
+                        if msgTU == "":
+                            return
+                        data = api.search.search(msgTU, period="weekly")
+                        pornlist = []
+                        for vid in data.videos:
+                            pornlist.append(vid.video_id)
+                        url = requests.get("https://playx.cleverapps.io/api/?site_id=pornhub&video_id="+random.choice(pornlist))
+                        text = url.text
+                        datapX = json.loads(text)
+                        thumb = datapX['thumb']
+                        try:
+                            fullHD = datapX['mp4']['1080p']
+                        except:
+                            fullHD = datapX['mp4']['720p']
+                        phone = datapX['mp4']['480p']
+                        if fullHD != "":
+                            print(fullHD,thumb)
+                            client.sendFlexVideoTh(msg.to,fullHD)
+                        elif phone != "":
+                            print(phone,thumb)
+                            client.sendFlexVideoTh(msg.to,phone)
+                        else:
+                            print("NOVID")
+                            client.sendMessage(msg.to,"กรุณาลองใหม่อีกครั้ง")
 
                     # if cmd == ".ruay" or cmd == "ruay":
                     #     if cmd.startswith('.'):

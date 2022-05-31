@@ -9,3 +9,4 @@ datetime
 apscheduler
 gtts
 pyqrcode
+pornhub-api
