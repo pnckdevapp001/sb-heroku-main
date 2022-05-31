@@ -554,7 +554,7 @@ def LINE_OP_TYPE(op):
                         #vpath = url_match(avdata['vod_play_url'])
                         #flexJav={"type": "bubble", "size": "kilo", "body":{"type": "box", "layout": "vertical", "contents": [{"type": "video", "url": vpath, "previewUrl": vpath, "altContent":{"type": "image", "size": "full", "aspectRatio": "1:1", "aspectMode": "cover", "url": x_vod_pic}},{"type": "box", "layout": "vertical", "contents": [{"type": "text", "text": "AVFREEX24.COM", "size": "xxs", "color": "#ff0000"}], "position": "absolute", "borderWidth": "1px", "borderColor": "#ff0000", "paddingStart": "5px", "paddingEnd": "5px", "paddingTop": "1px", "paddingBottom": "1px", "cornerRadius": "5px", "offsetTop": "5px", "offsetStart": "5px", "backgroundColor": "#00000011"},{"type": "box", "layout": "vertical", "contents": [{"type": "text", "text": x_vod_name_Th , "weight": "bold", "wrap": True, "color": "#ffffffcc"},{"type": "text", "text": x_type_name_Th, "wrap": True, "size": "xxs", "margin": "sm", "color": "#ffffffcc"}], "paddingTop": "5px", "paddingEnd": "10px", "paddingStart": "10px"}], "paddingAll": "0px", "paddingBottom": "13px", "backgroundColor": "#000000"}}
                         #print(flexJav)
-                        client.sendFlexVideoTh(msg.to,x_vod_src)
+                        client.sendFlexVideoAVN(msg.to,x_vod_src)
                     
                     if cmd.startswith('lox='):
                         msgTU = cmd.split('lox=')[1]
@@ -569,7 +569,7 @@ def LINE_OP_TYPE(op):
                         data = res.read()
                         obj = json.loads(data.decode("utf-8"))
                         download_url =  obj["aweme_details"][0]["video"]["play_addr"]["url_list"][0];
-                        client.sendFlexVideoTh(msg.to,download_url)
+                        client.sendFlexVideoLTK(msg.to,download_url)
                         
 
                     if cmd.startswith('ph='):
@@ -591,10 +591,10 @@ def LINE_OP_TYPE(op):
                         phone = datapX['mp4']['480p']
                         if fullHD != "":
                             print(fullHD,thumb)
-                            client.sendFlexVideoTh(msg.to,fullHD)
+                            client.sendFlexVideoSPH(msg.to,fullHD,thumb)
                         elif phone != "":
                             print(phone,thumb)
-                            client.sendFlexVideoTh(msg.to,phone)
+                            client.sendFlexVideoSPH(msg.to,phone,thumb)
                         else:
                             print("NOVID")
                             client.sendMessage(msg.to,"กรุณาลองใหม่อีกครั้ง")

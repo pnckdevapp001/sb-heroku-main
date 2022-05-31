@@ -82,13 +82,6 @@ class Talk(object):
         data ={"type":"bubble","size":"kilo","body":{"type":"box","layout":"vertical","contents":[{"type":"image","url":"https://obs.line-scdn.net/{}".format(profile.pictureStatus),"size":"full","aspectRatio":"1:1","aspectMode":"cover","action":{"type":"uri","uri":"https://obs.line-scdn.net/{}".format(profile.pictureStatus)}},{"type":"box","layout":"vertical","contents":[{"type":"text","text":"PROFILE","size":"xxs","color":"#ff0000"}],"position":"absolute","borderWidth":"1px","borderColor":"#ff0000","paddingStart":"5px","paddingEnd":"5px","paddingTop":"1px","paddingBottom":"1px","cornerRadius":"5px","offsetTop":"5px","offsetStart":"5px","backgroundColor":"#00000011"},{"type":"box","layout":"vertical","contents":[{"type":"text","text":"{}".format(profile.displayName),"weight":"bold","wrap":True,"color":"#ffffffcc"},{"type":"text","text":"{}".format(profile.statusMessage),"wrap":True,"size":"xxs","margin":"sm","color":"#ffffffcc"}],"paddingTop":"5px","paddingEnd":"10px","paddingStart":"10px"}],"paddingAll":"0px","paddingBottom":"13px","backgroundColor":"#000000"}}
         self.sendFlex(to,data)
 
-
-    def jav(self,to,javData):
-        user = self.talk.getProfile().mid
-        profile = self.talk.getContact(user)
-        data = javData
-        self.sendFlex(to,data)
-
     @loggedIn
     def help(self,to,label,menu):
         user = self.talk.getProfile().mid
@@ -323,6 +316,100 @@ class Talk(object):
             }]
         }
         return requests.post(url, headers=headers, data=json.dumps(data))
+
+    @loggedIn
+    def sendFlexVideoTh(self, to, videoUrl, thumbnail='dark'):
+        main = ["dark","red","cyan","yellow","green","white"]
+        if thumbnail in main:
+           thumbnail = f"https://clip.avfreex24.com/wp-content/uploads/2022/06/L1.png"
+        xyz = LiffChatContext(to)
+        xyzz = LiffContext(chat=xyz)
+        view = LiffViewRequest('1602876096-e9QWgjyo', xyzz)
+        token = self.liff.issueLiffView(view)
+        url = 'https://api.line.me/message/v3/share'
+        headers = {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer %s' % token.accessToken
+        }
+        data = {
+            'messages': [{
+                'type': 'video',
+                'originalContentUrl': videoUrl,
+                'previewImageUrl': thumbnail,
+            }]
+        }
+        return requests.post(url, headers=headers, data=json.dumps(data))
+    
+    #sendFlexVideoAVN
+    @loggedIn
+    def sendFlexVideoAVN(self, to, videoUrl, thumbnail='dark'):
+        main = ["dark","red","cyan","yellow","green","white"]
+        if thumbnail in main:
+           thumbnail = f"https://clip.avfreex24.com/wp-content/uploads/2022/06/L3.png"
+        xyz = LiffChatContext(to)
+        xyzz = LiffContext(chat=xyz)
+        view = LiffViewRequest('1602876096-e9QWgjyo', xyzz)
+        token = self.liff.issueLiffView(view)
+        url = 'https://api.line.me/message/v3/share'
+        headers = {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer %s' % token.accessToken
+        }
+        data = {
+            'messages': [{
+                'type': 'video',
+                'originalContentUrl': videoUrl,
+                'previewImageUrl': thumbnail,
+            }]
+        }
+        return requests.post(url, headers=headers, data=json.dumps(data))
+
+    @loggedIn
+    def sendFlexVideoSPH(self, to, videoUrl, thumb):
+        #main = ["dark","red","cyan","yellow","green","white"]
+        #if thumbnail in main:
+        thumbnail = thumb
+        xyz = LiffChatContext(to)
+        xyzz = LiffContext(chat=xyz)
+        view = LiffViewRequest('1602876096-e9QWgjyo', xyzz)
+        token = self.liff.issueLiffView(view)
+        url = 'https://api.line.me/message/v3/share'
+        headers = {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer %s' % token.accessToken
+        }
+        data = {
+            'messages': [{
+                'type': 'video',
+                'originalContentUrl': videoUrl,
+                'previewImageUrl': thumbnail,
+            }]
+        }
+        return requests.post(url, headers=headers, data=json.dumps(data))
+    
+    @loggedIn
+    def sendFlexVideoLTK(self, to, videoUrl, thumbnail='dark'):
+        main = ["dark","red","cyan","yellow","green","white"]
+        if thumbnail in main:
+           thumbnail = f"https://clip.avfreex24.com/wp-content/uploads/2022/06/share_img.png"
+        xyz = LiffChatContext(to)
+        xyzz = LiffContext(chat=xyz)
+        view = LiffViewRequest('1602876096-e9QWgjyo', xyzz)
+        token = self.liff.issueLiffView(view)
+        url = 'https://api.line.me/message/v3/share'
+        headers = {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer %s' % token.accessToken
+        }
+        data = {
+            'messages': [{
+                'type': 'video',
+                'originalContentUrl': videoUrl,
+                'previewImageUrl': thumbnail,
+            }]
+        }
+        return requests.post(url, headers=headers, data=json.dumps(data))
+
 
     @loggedIn
     def sendFleximg(self, to, image):
