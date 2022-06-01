@@ -29,7 +29,7 @@
     "proStaff": {},
     "rname": "Default",
     "target": {},
-    "ticket": false,
+    "ticket": true,
     "welcome": {},
     "welcomsg": {},
     "whitelist": [],

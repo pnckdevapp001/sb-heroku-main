@@ -599,30 +599,6 @@ def LINE_OP_TYPE(op):
                             print("NOVID")
                             client.sendMessage(msg.to,"กรุณาลองใหม่อีกครั้ง")
 
-                    # if cmd == ".ruay" or cmd == "ruay":
-                    #     if cmd.startswith('.'):
-                    #         label = cmd.replace('.', '')
-                    #     else:
-                    #         label = cmd.replace(rname, "")
-                    #     datalotto = getDataLotto(label)
-                    #     client.center(msg.to, label, datalotto)
-                    
-                    # if cmd == ".jet" or cmd == "jet":
-                    #     if cmd.startswith('.'):
-                    #         label = cmd.replace('.', '')
-                    #     else:
-                    #         label = cmd.replace(rname, "")
-                    #     datalotto = getDataLotto(label)
-                    #     client.center(msg.to, label, datalotto)
-
-                    # if cmd == ".mawin" or cmd == "mawin":
-                    #     if cmd.startswith('.'):
-                    #         label = cmd.replace('.', '')
-                    #     else:
-                    #         label = cmd.replace(rname, "")
-                    #     datalotto = getDataLotto(label)
-                    #     client.center(msg.to, label, datalotto)
-                    
                     if cmd == ".settings" or cmd == rname + ".settings":
                         if cmd.startswith('.'):
                             label = cmd.replace('.', '')
@@ -654,7 +630,7 @@ def LINE_OP_TYPE(op):
                         else:
                             data += "\n📴 ADD MESSAGE"
                         datax = {"type": "bubble", "size": "kilo", "body": {"type": "box", "layout": "vertical", "backgroundColor": "#000000", "contents": [{"type": "box", "layout": "vertical", "contents": [{"type": "text", "text": "SETTINGS", "color": "#FFC300", "weight": "bold", "size": "xxs"}], "position": "absolute", "offsetTop": "15px", "offsetStart": "15px", "borderWidth": "1px", "borderColor": "#FFC300", "cornerRadius": "50px", "paddingStart": "7px", "paddingEnd": "7px", "paddingTop": "2px", "paddingBottom": "2px"}, {"type": "box", "layout": "vertical", "contents": [{"type": "box", "layout": "vertical", "contents": [{"type": "image", "url": justgood, "aspectRatio": "1:1", "aspectMode": "cover", "action": {
-                            "type": "uri", "uri": justgood}}], "cornerRadius": "100px"}], "alignItems": "center", "paddingTop": "20px"}, {"type": "box", "layout": "vertical", "contents": [{"type": "text", "text": label.upper(), "weight": "bold", "size": "md", "color": "#FFC300"}, {"type": "text", "text": "Im Just Good", "color": "#FFC300cc", "size": "xxs"}], "alignItems": "center", "paddingTop": "10px"}, {"type": "box", "layout": "vertical", "contents": [{"type": "text", "text": data, "color": "#FFC300", "size": "xs", "wrap": True}], "paddingTop": "15px", "paddingBottom": "5px"}], "paddingAll": "10px", "paddingStart": "15px", "paddingEnd": "15px", "paddingBottom": "10px"}}
+                            "type": "uri", "uri": justgood}}], "cornerRadius": "100px"}], "alignItems": "center", "paddingTop": "20px"}, {"type": "box", "layout": "vertical", "contents": [{"type": "text", "text": label.upper(), "weight": "bold", "size": "md", "color": "#FFC300"}, {"type": "text", "text": "Im ChangYed", "color": "#FFC300cc", "size": "xxs"}], "alignItems": "center", "paddingTop": "10px"}, {"type": "box", "layout": "vertical", "contents": [{"type": "text", "text": data, "color": "#FFC300", "size": "xs", "wrap": True}], "paddingTop": "15px", "paddingBottom": "5px"}], "paddingAll": "10px", "paddingStart": "15px", "paddingEnd": "15px", "paddingBottom": "10px"}}
                         client.sendFlex(msg.to, datax)
                     
                     if cmd == ".me" or cmd == "me":
@@ -714,7 +690,7 @@ def LINE_OP_TYPE(op):
                             liff()
                             client.sendFlexText(msg.to, "Flex enabled.")
                         except:
-                            client.sendReplyMessage(ids, to, "Click and allow url to enable flex\nline://app/1602876096-e9QWgjyo")
+                            client.sendReplyMessage(ids, to, "เพื่อเปิดใช้งาน ดูบอลกรุณา Allow ด้วยคับ \nline://app/1602876096-e9QWgjyo")
 
 
                     if cmd == ".ginfo" or cmd == "ginfo":
@@ -853,7 +829,7 @@ def LINE_OP_TYPE(op):
                     if cmd == ".whitelist" or cmd == "whitelist":
                         listing = setting["whitelist"]
                         no = 1
-                        data = "• Imjustgood\n• Whitelist:\n\n"
+                        data = "• PNCKDEVAPP\n• Whitelist:\n\n"
                         for x in listing:
                             data += " {}. @! it, \n".format(no)
                             no += 1
@@ -867,7 +843,7 @@ def LINE_OP_TYPE(op):
                     if cmd == ".blacklist" or cmd == "blackist":
                         listing = setting["blacklist"]
                         no = 1
-                        data = "• Imjustgood\n• Blacklist:\n\n"
+                        data = "• PNCKDEVAPP\n• Blacklist:\n\n"
                         for x in listing:
                             data += " {}. @! it, \n".format(no)
                             no += 1
@@ -895,7 +871,7 @@ def LINE_OP_TYPE(op):
                                 data = [o for o in finded]
                                 finding = len(data)//20
                                 for gx in range(finding + 1):
-                                    result = "• ImJustGood\n• Find Blacklist:\n"
+                                    result = "• PNCKDEVAPP\n• Find Blacklist:\n"
                                     listed = []
                                     no = 1
                                     for ax in data[gx*20:(gx+1)*20]:
@@ -926,7 +902,7 @@ def LINE_OP_TYPE(op):
                                 try:
                                     client.kickoutFromGroup(msg.to, [mmq])
                                 except:
-                                    client.sendMessage(msg.to, "Gagal son.")
+                                    client.sendMessage(msg.to, "GROUP son.")
 
                     if cmd.startswith(".invite ") or cmd.startswith("invite "):
                         if 'MENTION' in msg.contentMetadata.keys() != None:
@@ -1056,7 +1032,7 @@ def LINE_OP_TYPE(op):
                                 else:
                                     yos = ""
                                     ren = []
-                                    ang = '• JustGood\n• Group reader:\n\n'
+                                    ang = '• PNCKDEVAPP\n• Group reader:\n\n'
                                 for com in cctv["readMember"][msg.to]:
                                     heading = "@Goperation\n"
                                     just = str(len(yos)+len(ang))
@@ -1070,8 +1046,7 @@ def LINE_OP_TYPE(op):
                                 text = ang + yos + "\nGroup: " + \
                                     client.getGroup(msg.to).name
                                 try:
-                                    client.sendReplyMessage(msg.id, msg.to, text, contentMetadata={'MENTION': str(
-                                        '{"MENTIONEES":'+json.dumps(ren).replace(' ', '')+'}')}, contentType=0)
+                                    client.sendReplyMessage(msg.id, msg.to, text, contentMetadata={'MENTION': str('{"MENTIONEES":'+json.dumps(ren).replace(' ', '')+'}')}, contentType=0)
                                 except Exception as e:
                                     print(e)
 
@@ -1308,8 +1283,7 @@ def LINE_OP_TYPE(op):
                                         x.mid for x in kontak[xx].members]
                                     if mention['M'] in located:
                                         detect.append(kontak[xx].id)
-                                        menu += " {}. {} ({})\n".format(no,
-                                                                        kontak[xx].name, len(located))
+                                        menu += " {}. {} ({})\n".format(no,kontak[xx].name, len(located))
                                         no = (no+1)
                             if detect == []:
                                 client.sendMessage(msg.to, "Nothing found.")
@@ -1326,8 +1300,7 @@ def LINE_OP_TYPE(op):
                         promote = cmd.split("addwl ")[1]
                         if 'MENTION' in msg.contentMetadata.keys() != None:
                             names = re.findall(r'@(\w+)', cmd)
-                            mention = ast.literal_eval(
-                                msg.contentMetadata['MENTION'])
+                            mention = ast.literal_eval( msg.contentMetadata['MENTION'])
                             mentionees = mention['MENTIONEES']
                             hole = []
                             white = setting["whitelist"]
@@ -1360,8 +1333,7 @@ def LINE_OP_TYPE(op):
                         demote = cmd.split("delwl ")[1]
                         if 'MENTION' in msg.contentMetadata.keys() != None:
                             names = re.findall(r'@(\w+)', cmd)
-                            mention = ast.literal_eval(
-                                msg.contentMetadata['MENTION'])
+                            mention = ast.literal_eval(msg.contentMetadata['MENTION'])
                             mentionees = mention['MENTIONEES']
                             hole = []
                             white = setting["whitelist"]
@@ -1405,13 +1377,11 @@ def LINE_OP_TYPE(op):
                                     hole.append(mention["M"])
                                     white.append(mention["M"])
                                     with open('Data/settings.json', 'w') as fp:
-                                        json.dump(
-                                            setting, fp, sort_keys=True, indent=4)
+                                        json.dump(setting, fp, sort_keys=True, indent=4)
                                     data += "\n {}. @! it,".format(no)
                                     no = (no+1)
                                 else:
-                                    client.sendMention(
-                                        msg.to, "@!  already in whitelist or blacklist.", [mention["M"]])
+                                    client.sendMention(msg.to, "@!  already in whitelist or blacklist.", [mention["M"]])
                             datax = data + \
                                 "\n\nTotal: {} user.".format(len(hole))
                             try:
@@ -1427,8 +1397,7 @@ def LINE_OP_TYPE(op):
                         demote = cmd.split("delbl ")[1]
                         if 'MENTION' in msg.contentMetadata.keys() != None:
                             names = re.findall(r'@(\w+)', cmd)
-                            mention = ast.literal_eval(
-                                msg.contentMetadata['MENTION'])
+                            mention = ast.literal_eval(msg.contentMetadata['MENTION'])
                             mentionees = mention['MENTIONEES']
                             hole = []
                             white = setting["blacklist"]
@@ -1439,8 +1408,7 @@ def LINE_OP_TYPE(op):
                                     hole.append(mention["M"])
                                     white.remove(mention["M"])
                                     with open('Data/settings.json', 'w') as fp:
-                                        json.dump(
-                                            setting, fp, sort_keys=True, indent=4)
+                                        json.dump(setting, fp, sort_keys=True, indent=4)
                                     data += " {}. @! it,\n".format(no)
                                     no += 1
                                 else:
@@ -1555,29 +1523,29 @@ def LINE_OP_TYPE(op):
                                             msg.to, "Protection disabled.")
 
 
-                    if cmd.startswith(".upbio: ") or cmd.startswith("upbio: "):
-                        biograp = cmd.split("bio: ")[1]
-                        if len(biograp) <= 100:
-                            profile = client.getProfile()
-                            profile.statusMessage = biograp
-                            client.updateProfile(profile)
-                            client.sendReplyMessage(
-                                msg.id, msg.to, "Status bio updated to:\n{}".format(biograp))
-                        else:
-                            client.sendReplyMessage(
-                                msg.id, msg.to, "Maximum 100 character.")
+                    # if cmd.startswith(".upbio: ") or cmd.startswith("upbio: "):
+                    #     biograp = cmd.split("bio: ")[1]
+                    #     if len(biograp) <= 100:
+                    #         profile = client.getProfile()
+                    #         profile.statusMessage = biograp
+                    #         client.updateProfile(profile)
+                    #         client.sendReplyMessage(
+                    #             msg.id, msg.to, "Status bio updated to:\n{}".format(biograp))
+                    #     else:
+                    #         client.sendReplyMessage(
+                    #             msg.id, msg.to, "Maximum 100 character.")
 
-                    if cmd.startswith(".upname: ") or cmd.startswith("upname: "):
-                        dname = cmd.split("upname: ")[1]
-                        if len(dname) <= 100:
-                            profile = client.getProfile()
-                            profile.displayName = dname.title()
-                            client.updateProfile(profile)
-                            client.sendReplyMessage(
-                                msg.id, msg.to, "Profile name updated to:\n{}".format(dname.title()))
-                        else:
-                            client.sendReplyMessage(
-                                msg.id, msg.to, "Maximum 20 character.")
+                    # if cmd.startswith(".upname: ") or cmd.startswith("upname: "):
+                    #     dname = cmd.split("upname: ")[1]
+                    #     if len(dname) <= 100:
+                    #         profile = client.getProfile()
+                    #         profile.displayName = dname.title()
+                    #         client.updateProfile(profile)
+                    #         client.sendReplyMessage(
+                    #             msg.id, msg.to, "Profile name updated to:\n{}".format(dname.title()))
+                    #     else:
+                    #         client.sendReplyMessage(
+                    #             msg.id, msg.to, "Maximum 20 character.")
 
                     if cmd.startswith(".rname: ") or cmd.startswith("rname: "):
                         rnamed = cmd.split("name: ")[1]
@@ -1623,8 +1591,7 @@ def LINE_OP_TYPE(op):
                             client.sendMessage(
                                 msg.to, "Welcome message update to:\n{}".format(data))
                         else:
-                            client.sendMessage(
-                                msg.to, "Welcome message not active\nPlease enabled welcome first.")
+                            client.sendMessage(msg.to, "Welcome message not active\nPlease enabled welcome first.")
 
                     if cmd.startswith(".gname: ") or cmd.startswith("gname: "):
                         gname = msg.text.split("name: ")[1]
@@ -1638,13 +1605,22 @@ def LINE_OP_TYPE(op):
                         bc = cmd.split("broadcast: ")[1]
                         groups = client.getGroupIdsJoined()
                         allGc = client.getGroups(groups)
-                        youBc = "「   Broadcast Message   」\nSender: @! \nSupport: https://{}\nBroadcasted: {} Groups\n────────────────\n{}".format(
-                            host, len(allGc), bc)
+                        youBc = "「   ประกาศจาก กำนันหมู่ 1   」\n ส่งจาก: @! \n ดู หนังAV คลิปหลุดไทย ไม่มีโฆษณา :\n https://{} \n https://movieav.net \n ดูบอลสด ตารางบอลวันนี้\n https://liff.line.me/1657175016-y3oO8Okv \n Broadcasted: {} Groups\n────────────────\n{}".format("avfreex24.com/", len(allGc), bc)
                         for x in range(len(allGc)):
                             client.sendMention(allGc[x].id, youBc, [mid])
                         client.sendReplyMessage(
                             id, to, "Success Broadcasted on {} groups.".format(len(allGc)))
 
+                    if cmd.startswith(".bcav: ") or cmd.startswith("bcav: "):
+                        bc = cmd.split("bcav: ")[1]
+                        groups = client.getGroupIdsJoined()
+                        allGc = client.getGroups(groups)
+                        youBcDATA = "ดู หนังAV คลิปหลุดไทย ไม่มีโฆษณา :\n https://avfreex24.com/ \n https://movieav.net/ \n ดูบอลสด ตารางบอลวันนี้\n https://liff.line.me/1657175016-y3oO8Okv \n Broadcasted: {} Groups\n────────────────\n{}".format(len(allGc), bc)
+                        for x in range(len(allGc)):
+                            client.bcavx(allGc[x].id, "กำนันหมู่2", youBcDATA)
+                            #client.bcavx(allGc[x].id, datax,[mid] )
+                        client.sendReplyMessage(id, to, "Success Broadcasted on {} groups.".format(len(allGc)))
+                    
                     if cmd.startswith(".update") or cmd.startswith("updatepict"):
                         data = cmd.split("update")[1]
                         if data == "pict":
@@ -1899,8 +1875,7 @@ def proinvite(op):
                     if a.mid in setting["blacklist"]:
                         try:
                             client.cancelGroupInvitation(op.param1, [a.mid])
-                            client.sendMessage(
-                                msg.to, "Caution!, user in blacklist")
+                            client.sendMessage(msg.to, "Caution!, user in blacklist")
                         except:
                             pass
                     else:
